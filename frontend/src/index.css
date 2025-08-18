@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 260 30% 99%;
+    --foreground: 260 10% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 260 10% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 260 10% 10%;
+
+    --primary: 260 67% 75%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 30% 96%;
+    --secondary-foreground: 260 10% 10%;
+
+    --muted: 260 10% 96%;
+    --muted-foreground: 260 10% 50%;
+
+    --accent: 260 30% 96%;
+    --accent-foreground: 260 10% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 260 20% 90%;
+    --input: 260 20% 90%;
+    --ring: 260 67% 75%;
+
+    --radius: 1rem;
+  }
+
+  .dark {
+    --background: 260 10% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 260 10% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 260 10% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 260 67% 75%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 260 10% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 260 10% 15%;
+    --muted-foreground: 260 10% 70%;
+
+    --accent: 260 10% 15%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 260 10% 20%;
+    --input: 260 10% 20%;
+    --ring: 260 67% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .skin-glass {
+    @apply bg-white/70 dark:bg-black/70 backdrop-blur-md border border-white/20 dark:border-white/10 rounded-2xl shadow-md;
+  }
+  
+  .chapter-card {
+    @apply bg-gradient-to-br from-white to-secondary/30 dark:from-secondary/10 dark:to-background/60 backdrop-blur-sm border border-white/20 dark:border-white/5 rounded-2xl shadow-md transition-all hover:shadow-lg;
+  }
+}
